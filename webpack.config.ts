@@ -1,10 +1,17 @@
-const path = require("path");
-const webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+import path from "path";
+import webpack, { Configuration } from "webpack";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 
-module.exports = (env) => {
+export type BuildMode = "development" | "production";
+
+export interface BuildEnv {
+  mode: BuildMode;
+  port: number;
+}
+
+const config = (env: BuildEnv): Configuration => {
   const port = env.port || 9000;
   const mode = env.mode || "production";
   const isDev = mode !== "production";
@@ -78,3 +85,5 @@ module.exports = (env) => {
     },
   };
 };
+
+export default config;

@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
-    "start": "webpack serve --open --env port=9000 mode=development"
+    "start": "webpack serve --open --env port=9000 mode=development",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -20,11 +21,15 @@
   "homepage": "https://github.com/kadadov/frontend#readme",
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",
+    "@types/node": "^18.14.0",
+    "@types/webpack": "^5.28.0",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
     "style-loader": "^3.3.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
