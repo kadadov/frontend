@@ -1,5 +1,5 @@
-import cls from "./App.module.css";
+import { AppRouter } from "router/AppRouter";
 
 export const App = () => {
-  return <div className={cls.app}>App</div>;
+  return <AppRouter />;
 };
