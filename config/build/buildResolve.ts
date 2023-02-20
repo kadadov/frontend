@@ -3,6 +3,6 @@ import { BuildOptions } from "./types/config";
 
 export const buildResolve = (options: BuildOptions): ResolveOptions => {
   return {
-    extensions: [".js", ".ts"],
+    extensions: [".tsx", ".ts", ".js", ".ts"],
   };
 };

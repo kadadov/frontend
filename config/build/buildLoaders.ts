@@ -5,9 +5,27 @@ import { BuildOptions } from "./types/config";
 export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
   const { isDev } = options;
 
+  const typescriptLoader = {
+    test: /\.tsx?$/,
+    use: "ts-loader",
+    exclude: /node_modules/,
+  };
+
   const cssLoader = {
     test: /\.css$/i,
-    use: [isDev ? "style-loader" : MiniCssExtractPlugin.loader, "css-loader"],
+    use: [
+      isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+      {
+        loader: "css-loader",
+        options: {
+          sourceMap: isDev,
+          modules: {
+            auto: (path: string) => Boolean(path.includes(".module.")),
+            localIdentName: isDev ? "[path][name]__[local]]" : "[hash]",
+          },
+        },
+      },
+    ],
   };
 
   const svgLoader = {
@@ -34,5 +52,5 @@ export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
     },
   };
 
-  return [cssLoader, svgLoader, imageLoader, fontLoader];
+  return [typescriptLoader, cssLoader, svgLoader, imageLoader, fontLoader];
 };

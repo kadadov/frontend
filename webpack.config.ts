@@ -10,7 +10,7 @@ const config = (env: BuildEnv): Configuration => {
   const isProd = mode === "production";
 
   const paths = {
-    entry: path.resolve(__dirname, "src", "index.js"),
+    entry: path.resolve(__dirname, "src", "index.tsx"),
     build: path.resolve(__dirname, "build"),
     html: path.resolve(__dirname, "public", "index.html"),
     src: path.resolve(__dirname, "src"),
