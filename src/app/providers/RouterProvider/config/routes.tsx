@@ -1,6 +1,6 @@
-import { AboutPage, MainPage, NotFoundPage } from "pages";
 import { RouteObject } from "react-router-dom";
-import { RoutePath } from "./routeConfig";
+import { AboutPage, MainPage, NotFoundPage } from "pages";
+import { RoutePath } from "shared/config/routerConfig";
 
 export const routes: RouteObject[] = [
   {

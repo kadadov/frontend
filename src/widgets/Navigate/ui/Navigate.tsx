@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { RoutePath } from "router/routeConfig";
+import { RoutePath } from "shared/config/routerConfig";
 
 export const Navigate = () => {
   return (

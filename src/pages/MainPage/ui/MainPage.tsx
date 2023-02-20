@@ -1,4 +1,4 @@
-import { Navigate } from "components";
+import { Navigate } from "widgets/Navigate";
 
 export const MainPage = () => {
   return (
