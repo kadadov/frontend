@@ -1,15 +1,7 @@
 import path from "path";
-import webpack, { Configuration } from "webpack";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
-
-export type BuildMode = "development" | "production";
-
-export interface BuildEnv {
-  mode: BuildMode;
-  port: number;
-}
+import { Configuration } from "webpack";
+import { buildWebpackConfig } from "./config/build/buildWebpackConfig";
+import { BuildEnv } from "./config/build/types/config";
 
 const config = (env: BuildEnv): Configuration => {
   const port = env.port || 9000;
@@ -24,66 +16,17 @@ const config = (env: BuildEnv): Configuration => {
     src: path.resolve(__dirname, "src"),
   };
 
-  return {
-    entry: paths.entry,
-    output: {
-      filename: "js/[name].[hash].js",
-      path: paths.build,
-      clean: true,
-    },
+  const options = {
     mode,
-    devtool: isDev ? "source-map" : undefined,
-    devServer: {
-      port,
-      open: true,
-    },
-    plugins: [
-      new MiniCssExtractPlugin({
-        filename: "css/[name].[hash].css",
-        chunkFilename: "src/[name].[hash].css",
-      }),
-      new HtmlWebpackPlugin({
-        template: paths.html,
-      }),
-      new webpack.ProgressPlugin(),
-    ],
-    module: {
-      rules: [
-        {
-          test: /\.css$/i,
-          use: [
-            isDev ? "style-loader" : MiniCssExtractPlugin.loader,
-            "css-loader",
-          ],
-        },
-        {
-          test: /\.svg$/i,
-          use: ["@svgr/webpack"],
-          generator: {
-            filename: "img/[hash][ext][query]",
-          },
-        },
-        {
-          test: /\.(png|jpg|jpeg|gif)$/i,
-          type: "asset/resource",
-          generator: {
-            filename: "img/[hash][ext][query]",
-          },
-        },
-        {
-          test: /\.(woff|woff2)$/i,
-          type: "asset/resource",
-          generator: {
-            filename: "fonts/[hash][ext][query]",
-          },
-        },
-      ],
-    },
-    optimization: {
-      minimize: isProd,
-      minimizer: [new CssMinimizerPlugin()],
-    },
+    port,
+    isDev,
+    isProd,
+    paths,
   };
+
+  const config = buildWebpackConfig(options);
+
+  return config;
 };
 
 export default config;
