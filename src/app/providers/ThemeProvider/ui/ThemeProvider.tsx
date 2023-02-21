@@ -1,5 +1,5 @@
 import { FC, useMemo, useState, PropsWithChildren } from "react";
-import { INITIAL_THEME } from "widgets/SwitcherTheme/contants/contants";
+import { INITIAL_THEME } from "widgets/SwitcherTheme/contants";
 import { ThemeContext } from "widgets/SwitcherTheme/context/ThemeContext";
 import { Theme } from "widgets/SwitcherTheme/types/types";
 

@@ -1,5 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 const NotFoundPage = () => {
-  return <div>404 страница не найдена</div>;
+  const { t } = useTranslation("notFountPage");
+
+  return (
+    <div>
+      <h2>{t("404 страница не найдена")}</h2>
+    </div>
+  );
 };
 
 export default NotFoundPage;
