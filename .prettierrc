@@ -3,7 +3,7 @@
 
   "overrides": [
     {
-      "files": "*.{ts,tsx}",
+      "files": "*.{ts,tsx,js,json}",
       "options": {
         "parser": "typescript",
         "printWidth": 80,
@@ -15,8 +15,7 @@
         "arrowParens": "avoid",
         "quoteProps": "as-needed",
         "bracketSpacing": true,
-        "bracketSameLine": false,
-        "jsxBracketSameLine": false
+        "bracketSameLine": false
       }
     },
     {

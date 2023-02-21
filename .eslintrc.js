@@ -7,10 +7,10 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'standard-with-typescript',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:i18next/recommended'
   ],
-  overrides: [
-  ],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     ecmaFeatures: {
@@ -19,10 +19,7 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json']
   },
-  plugins: [
-    'react',
-    'prettier'
-  ],
+  plugins: ['react', 'i18next', 'prettier'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'prettier/prettier': 'error'
