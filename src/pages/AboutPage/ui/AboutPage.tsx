@@ -1,10 +1,7 @@
-import { Navigate } from "widgets/Navigate";
+import { type FC } from "react";
 
-export const AboutPage = () => {
-  return (
-    <div>
-      <h2>AboutPage</h2>
-      <Navigate />
-    </div>
-  );
+const AboutPage: FC = () => {
+  return <div>О нас</div>;
 };
+
+export default AboutPage;

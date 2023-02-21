@@ -1,1 +1,1 @@
-export { AboutPage } from "./ui/AboutPage";
+export { AboutPageContainer as AboutPage } from "./ui/AboutPageContainer";
