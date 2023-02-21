@@ -1,13 +1,14 @@
-import { useTranslation } from "react-i18next";
+import { type FC } from 'react'
+import { useTranslation } from 'react-i18next'
 
-const NotFoundPage = () => {
-  const { t } = useTranslation("notFountPage");
+const NotFoundPage: FC = () => {
+  const { t } = useTranslation('notFountPage')
 
   return (
     <div>
-      <h2>{t("404 страница не найдена")}</h2>
+      <h2>{t('404 страница не найдена')}</h2>
     </div>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage

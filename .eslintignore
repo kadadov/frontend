@@ -1,0 +1,7 @@
+/public
+/build
+/node_modules
+/.idea
+
+/src/app/types/globals.d.ts
+/src/shared/config/**/*

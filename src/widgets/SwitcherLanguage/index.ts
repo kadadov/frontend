@@ -1,1 +1,1 @@
-export { SwitcherLanguage } from "./ui/SwitcherLanguage";
+export { SwitcherLanguage } from './ui/SwitcherLanguage'

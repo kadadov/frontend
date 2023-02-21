@@ -1,3 +1,3 @@
-export const delay = (ms = 500) => {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-};
+export const delay = async (ms = 500): Promise<any> => {
+  return await new Promise((resolve) => setTimeout(resolve, ms))
+}

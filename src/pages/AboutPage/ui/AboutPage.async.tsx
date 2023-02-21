@@ -1,7 +1,7 @@
-import { lazy } from "react";
+import { lazy } from 'react'
 
-import { delay } from "shared/lib/delay";
+import { delay } from 'shared/lib/delay'
 
 export const AboutPageAsync = lazy(
-  async () => await delay().then(async () => await import("./AboutPage"))
-);
+  async () => await delay().then(async () => await import('./AboutPage'))
+)

@@ -1,11 +1,11 @@
-import { Suspense } from "react";
-import { Loader } from "shared/ui/Loader";
-import { Navigate } from "widgets/Navigate";
-import { SwitcherLanguage } from "widgets/SwitcherLanguage";
-import { SwitcherTheme } from "widgets/SwitcherTheme";
-import { MainPageAsync } from "./MainPage.async";
+import { type FC, Suspense } from 'react'
+import { Loader } from 'shared/ui/Loader'
+import { Navigate } from 'widgets/Navigate'
+import { SwitcherLanguage } from 'widgets/SwitcherLanguage'
+import { SwitcherTheme } from 'widgets/SwitcherTheme'
+import { MainPageAsync } from './MainPage.async'
 
-export const MainPageContainer = () => {
+export const MainPageContainer: FC = () => {
   return (
     <>
       <Navigate />
@@ -15,5 +15,5 @@ export const MainPageContainer = () => {
         <MainPageAsync />
       </Suspense>
     </>
-  );
-};
+  )
+}

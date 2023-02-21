@@ -1,5 +1,6 @@
-import { AppProvider } from "./providers/AppProvider";
+import { type FC } from 'react'
+import { AppProvider } from './providers/AppProvider'
 
-export const App = () => {
-  return <AppProvider />;
-};
+export const App: FC = () => {
+  return <AppProvider />
+}
