@@ -9,6 +9,8 @@
     "start": "webpack serve --open --env port=9000 mode=development",
     "lint:ts": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:ts:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:css": "stylelint 'src/**/*.css'",
+    "lint:css:fix": "stylelint --fix 'src/**/*.css'",
     "tsc": "tsc"
   },
   "repository": {
@@ -42,9 +44,13 @@
     "eslint-plugin-react": "^7.32.2",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
-    "prettier": "2.8.4",
+    "prettier": "^2.8.4",
     "react-refresh": "^0.14.0",
     "style-loader": "^3.3.1",
+    "stylelint": "^15.2.0",
+    "stylelint-config-clean-order": "^5.0.0",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-prettier": "^2.0.0",
     "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5",
