@@ -13,7 +13,8 @@
     "lint:css:fix": "stylelint --fix 'src/**/*.css'",
     "prettier": "prettier --check 'src/**/*.{js,jsx,ts,tsx}'",
     "prettier:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,8 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
     "mini-css-extract-plugin": "^2.7.2",
     "prettier": "^2.8.4",
     "react-refresh": "^0.14.0",
@@ -69,5 +72,14 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.1.5",
     "react-router-dom": "^6.8.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{tsx,ts,js}": "npm run lint:ts",
+    "src/**/*.css": "npm run lint:css"
   }
 }
