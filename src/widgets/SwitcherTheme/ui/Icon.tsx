@@ -9,11 +9,9 @@ interface IconProps extends SVGProps<SVGSVGElement> {
 }
 
 export const Icon: FC<IconProps> = ({ theme = DEFAULT_THEME, ...props }) => {
-  return theme === Theme.LIGHT
-    ? (
+  return theme === Theme.LIGHT ? (
     <IconLight {...props} />
-      )
-    : (
+  ) : (
     <IconDark {...props} />
-      )
+  )
 }

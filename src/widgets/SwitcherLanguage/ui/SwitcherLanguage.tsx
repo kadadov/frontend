@@ -19,13 +19,11 @@ export const SwitcherLanguage: FC = () => {
 
   return (
     <button onClick={onClick}>
-      {i18n.language === 'ru'
-        ? (
+      {i18n.language === 'ru' ? (
         <IconRussia className={cls.icon} />
-          )
-        : (
+      ) : (
         <IconUSA className={cls.icon} />
-          )}
+      )}
     </button>
   )
 }

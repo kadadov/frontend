@@ -6,7 +6,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'standard-with-typescript'
+    'standard-with-typescript',
+    'plugin:prettier/recommended'
   ],
   overrides: [
   ],
@@ -19,9 +20,11 @@ module.exports = {
     project: ['./tsconfig.json']
   },
   plugins: [
-    'react'
+    'react',
+    'prettier'
   ],
   rules: {
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    'prettier/prettier': 'error'
   }
 }
