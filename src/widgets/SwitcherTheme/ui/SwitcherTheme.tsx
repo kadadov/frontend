@@ -1,5 +1,7 @@
 import { type FC } from 'react'
+
 import { useTheme } from '../hooks/useTheme'
+
 import { Icon } from './Icon'
 import cls from './SwitcherTheme.module.css'
 

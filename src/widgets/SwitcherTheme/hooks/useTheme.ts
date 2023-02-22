@@ -1,6 +1,7 @@
 import { useContext } from 'react'
-import { saveTheme } from 'widgets/SwitcherTheme/lib/saveTheme'
+
 import { ThemeContext } from '../context/ThemeContext'
+import { saveTheme } from '../lib/saveTheme'
 import { Theme } from '../types/types'
 
 interface UseThemeResult {

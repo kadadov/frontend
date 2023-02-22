@@ -1,4 +1,5 @@
 import { type FC, useMemo, useState, type PropsWithChildren } from 'react'
+
 import { INITIAL_THEME } from 'widgets/SwitcherTheme/contants'
 import { ThemeContext } from 'widgets/SwitcherTheme/context/ThemeContext'
 import { type Theme } from 'widgets/SwitcherTheme/types/types'

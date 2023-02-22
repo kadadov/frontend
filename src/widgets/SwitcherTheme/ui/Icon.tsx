@@ -1,6 +1,8 @@
 import { type FC, type SVGProps } from 'react'
+
 import IconDark from 'shared/assets/icons/dark-mode.svg'
 import IconLight from 'shared/assets/icons/light-mode.svg'
+
 import { DEFAULT_THEME } from '../contants'
 import { Theme } from '../types/types'
 

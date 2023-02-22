@@ -1,4 +1,5 @@
 import { LOCAL_STORAGE_THEME_KEY } from 'widgets/SwitcherTheme/contants'
+
 import { type Theme } from '../types/types'
 
 export const saveTheme = (theme: Theme): void => {

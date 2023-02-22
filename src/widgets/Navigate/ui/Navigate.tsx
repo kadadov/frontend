@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+
 import { RoutePath } from 'shared/config/routerConfig'
 
 export const Navigate: FC = () => {

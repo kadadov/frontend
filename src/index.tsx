@@ -1,4 +1,5 @@
 import { createRoot } from 'react-dom/client'
+
 import 'shared/config/languageConfig'
 import 'app/styles/index.css'
 import { App } from 'app/App'
