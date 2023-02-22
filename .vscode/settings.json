@@ -1,3 +1,42 @@
 {
-  "i18n-ally.localesPaths": ["public/locales"]
+  "eslint.format.enable": true,
+  "css.validate": false,
+  "stylelint.validate": ["css", "scss"],
+
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+  },
+
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true,
+        "source.sortMembers": true
+    }
+  },
+
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    },
+  },
+
+  "i18n-ally.localesPaths": [
+    "public/locales",
+    "src/shared/config/i18n"
+  ],
+  "i18n-ally.sourceLanguage": "ru",
+
+  "files.exclude": {
+    ".idea": true,
+    ".vscode": true,
+    "build": true,
+  },
 }

@@ -8,14 +8,6 @@
         "stylelint-order"
     ],
     "rules": {
-        "prettier/prettier": true,
-        "order/order": [
-			"custom-properties",
-			"declarations"
-		],
-		"order/properties-order": [
-			"width",
-			"height"
-		]
+        "prettier/prettier": true
     }
 }

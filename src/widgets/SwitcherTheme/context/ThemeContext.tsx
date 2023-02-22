@@ -1,6 +1,6 @@
-import { createContext } from 'react'
+import { createContext } from "react"
 
-import { Theme } from 'widgets/SwitcherTheme/types/types'
+import { Theme } from "widgets/SwitcherTheme/types/types"
 
 export interface ThemeContextProps {
   theme: Theme

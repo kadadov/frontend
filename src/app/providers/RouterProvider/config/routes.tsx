@@ -1,7 +1,7 @@
-import { type RouteObject } from 'react-router-dom'
+import { type RouteObject } from "react-router-dom"
 
-import { AboutPage, MainPage, NotFoundPage } from 'pages'
-import { RoutePath } from 'shared/config/routerConfig'
+import { AboutPage, MainPage, NotFoundPage } from "pages"
+import { RoutePath } from "shared/config/routerConfig"
 
 export const routes: RouteObject[] = [
   {

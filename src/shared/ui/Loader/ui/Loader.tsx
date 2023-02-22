@@ -1,6 +1,6 @@
-import { type FC } from 'react'
+import { type FC } from "react"
 
-import cls from './Loader.module.css'
+import cls from "./Loader.module.css"
 
 export const Loader: FC = () => {
   return (
