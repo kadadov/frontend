@@ -1,15 +1,16 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { RuleSetRule } from "webpack";
-import { BuildOptions } from "./types/config";
+import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import { type RuleSetRule } from "webpack"
+
+import { type BuildOptions } from "./types/config"
 
 export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
-  const { isDev } = options;
+  const { isDev } = options
 
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: "ts-loader",
-    exclude: /node_modules/,
-  };
+    exclude: /node_modules/
+  }
 
   const cssLoader = {
     test: /\.css$/i,
@@ -21,36 +22,36 @@ export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
           sourceMap: isDev,
           modules: {
             auto: (path: string) => Boolean(path.includes(".module.")),
-            localIdentName: isDev ? "[path][name]__[local]]" : "[hash]",
-          },
-        },
-      },
-    ],
-  };
+            localIdentName: isDev ? "[path][name]__[local]]" : "[hash]"
+          }
+        }
+      }
+    ]
+  }
 
   const svgLoader = {
     test: /\.svg$/i,
     use: ["@svgr/webpack"],
     generator: {
-      filename: "img/[hash][ext][query]",
-    },
-  };
+      filename: "img/[hash][ext][query]"
+    }
+  }
 
   const imageLoader = {
     test: /\.(png|jpg|jpeg|gif)$/i,
     type: "asset/resource",
     generator: {
-      filename: "img/[hash][ext][query]",
-    },
-  };
+      filename: "img/[hash][ext][query]"
+    }
+  }
 
   const fontLoader = {
     test: /\.(woff|woff2)$/i,
     type: "asset/resource",
     generator: {
-      filename: "fonts/[hash][ext][query]",
-    },
-  };
+      filename: "fonts/[hash][ext][query]"
+    }
+  }
 
-  return [typescriptLoader, cssLoader, svgLoader, imageLoader, fontLoader];
-};
+  return [typescriptLoader, cssLoader, svgLoader, imageLoader, fontLoader]
+}
