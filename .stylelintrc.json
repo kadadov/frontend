@@ -4,8 +4,8 @@
         "stylelint-config-clean-order"
     ],
     "plugins": [
-        "stylelint-prettier",
-        "stylelint-order"
+        "stylelint-order",
+        "stylelint-prettier"
     ],
     "rules": {
         "prettier/prettier": true

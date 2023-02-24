@@ -1,32 +1,33 @@
-import { BuildOptions } from "./types/config";
-import { buildDevServer } from "./buildDevServer";
-import { Configuration } from "webpack";
-import { buildResolve } from "./buildResolve";
-import { buildPlugins } from "./buildPlugins";
-import { buildLoaders } from "./buildLoaders";
-import { buildOptimization } from "./buildOptimization";
+import { type Configuration } from "webpack"
+
+import { buildDevServer } from "./buildDevServer"
+import { buildLoaders } from "./buildLoaders"
+import { buildOptimization } from "./buildOptimization"
+import { buildPlugins } from "./buildPlugins"
+import { buildResolve } from "./buildResolve"
+import { type BuildOptions } from "./types/config"
 
 export const buildWebpackConfig = (options: BuildOptions): Configuration => {
-  const { mode, isDev, isProd, paths } = options;
+  const { mode, isDev, isProd, paths } = options
 
   return {
     entry: paths.entry,
     output: {
       filename: "js/[name].[hash].js",
       path: paths.build,
-      clean: true,
+      clean: true
     },
     mode,
     devtool: isDev ? "source-map" : undefined,
     devServer: isDev ? buildDevServer(options) : undefined,
     plugins: buildPlugins(options),
     module: {
-      rules: buildLoaders(options),
+      rules: buildLoaders(options)
     },
     optimization: {
       minimize: isProd,
-      minimizer: buildOptimization(options),
+      minimizer: buildOptimization(options)
     },
-    resolve: buildResolve(options),
-  };
-};
+    resolve: buildResolve(options)
+  }
+}
