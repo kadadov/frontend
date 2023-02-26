@@ -14,4 +14,7 @@ $ npm run build
 
 # запустить тестовое окружение
 $ npm run start
+
+# запустить анализ бандлов
+$ npm run analyze
 ```
