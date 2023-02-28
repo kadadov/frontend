@@ -1,4 +1,4 @@
-import { type FC, Suspense } from "react"
+import { Suspense, type FC } from "react"
 
 import { Loader } from "shared/ui/Loader"
 import { Navigate } from "widgets/Navigate"
